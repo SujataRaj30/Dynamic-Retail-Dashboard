@@ -55,7 +55,19 @@ The project utilizes three main datasets:
 
 This dashboard addresses several core analytical needs, including:
 
-* **KPI Overview:** Displays totals for sales, profit, quantity, order volume, and profit margin.
+* **KPI Overview:**
+Objective: Calculate and display Total Sales, Total Profit, Total Quantity, Number of Orders, and Profit Margin dynamically.
+Steps:
+1. Import the Orders Table into Excel using Power Query.
+2. Create calculated columns for:
+   Profit Margin = Profit / Sales.
+3. Use Excel formulas to calculate:
+   Total Sales = =SUM(Sales).
+   Total Profit = =SUM(Profit).
+   Total Quantity = =SUM(Quantity).
+   Total Orders = Count of Order ID.
+Build a dynamic KPI table and use symbols to enhance visual appeal (e.g., 💰 for Total Sales).
+
   ![kpi](https://github.com/user-attachments/assets/63f34d0b-cdd0-4ba5-8f91-6f7b280b2299)
 
   
