@@ -56,6 +56,7 @@ The project utilizes three main datasets:
 This dashboard addresses several core analytical needs, including:
 
 * **KPI Overview:**
+  
 Objective: Calculate and display Total Sales, Total Profit, Total Quantity, Number of Orders, and Profit Margin dynamically.
 Steps:
 1. Import the Orders Table into Excel using Power Query.
