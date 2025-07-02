@@ -78,7 +78,7 @@ Includes sales representatives and their regional assignments.
 - Line Chart to show trends
 - Add slicers for filters (e.g., Region, Segment)
 
-![Sales vs Profit](https://github.com/user-attachments/assets/0ed77c31-5290-47b5-a5c0-87fad407a03b)
+![Screenshot 2025-07-02 130055](https://github.com/user-attachments/assets/8d65bb2b-bfee-4990-83d4-b935f749ffdf)
 
 ---
 
@@ -91,7 +91,7 @@ Includes sales representatives and their regional assignments.
 - Bar Chart for visual representation
 - Add filters for deeper analysis
 
-![category](https://github.com/user-attachments/assets/d4558765-f017-4a7c-9d81-a5d184a8f040)
+![Category](https://github.com/user-attachments/assets/c1caa770-7edd-4323-9c7b-de37a760a2c5)
 
 ---
 
@@ -103,7 +103,7 @@ Includes sales representatives and their regional assignments.
 - Use formula: `Segment Sales / Total Sales * 100`
 - Display via Pie or Donut Chart with percentage labels
 
-![Segment](https://github.com/user-attachments/assets/c2478e0a-315f-44eb-b703-af019332bf99)
+![Screenshot 2025-07-02 125825](https://github.com/user-attachments/assets/2f7f3113-acb3-4631-86a7-0de98c54934a)
 
 ---
 
@@ -114,6 +114,8 @@ Includes sales representatives and their regional assignments.
 - Pivot Table with `Country` and `Sales`
 - Use conditional formatting or create a Map Chart
 - Highlight top-selling countries
+
+![Screenshot 2025-07-02 125941](https://github.com/user-attachments/assets/c43f39b8-896c-49d5-8243-ade665708173)
 
 ---
 
@@ -126,6 +128,8 @@ Includes sales representatives and their regional assignments.
 - Filter Top 5 only
 - Column Chart for visualization
 
+![Screenshot 2025-07-02 130352](https://github.com/user-attachments/assets/27a759a7-05d1-4933-94af-289deb35b995)
+
 ---
 
 ### 🚫 7. Bottom 5 Subcategories
@@ -135,6 +139,8 @@ Includes sales representatives and their regional assignments.
 - Similar to above but sort in ascending order
 - Filter Bottom 5 only
 - Use contrasting colors to emphasize performance gap
+
+![Screenshot 2025-07-02 130441](https://github.com/user-attachments/assets/025fc07b-76b0-4a94-a09c-b013a7d6f435)
 
 ---
 
@@ -146,6 +152,8 @@ Includes sales representatives and their regional assignments.
 - Add `Sales` to values
 - Line Chart for trend overview
 - Use slicers for category/region/segment filtering
+
+![Screenshot 2025-07-02 130539](https://github.com/user-attachments/assets/d96b8e31-0b26-4777-87e6-267f1b0309db)
 
 ---
 
