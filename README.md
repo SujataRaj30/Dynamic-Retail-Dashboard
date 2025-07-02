@@ -1,151 +1,197 @@
-## 📊 Dynamic Retail Dashboard
+# 📊 Dynamic Retail Dashboard in Excel
 
-### 🎯 Objective
+## 🧩 Overview
 
 The aim of this project is to build a detailed and interactive dashboard tailored for retail data analysis. Utilizing key performance indicators (KPIs) and compelling visualizations, the dashboard uncovers insights related to sales trends, profitability, product performance, and return patterns. It serves as a strategic tool to help retail managers and stakeholders make informed, data-backed decisions through a clear and engaging interface.
 
 ---
 
-### 🌟 Why This Project Matters
+## 📚 Datasets Used
 
-In the retail domain, success relies heavily on the ability to extract actionable insights from data. This dashboard empowers users to:
+### 1. Orders Table
+Contains detailed records of customer orders, including:
+- Product, shipping, and customer information
+- Financial metrics (Sales, Profit, Discount)
+- Market and segment details
 
-* **Track Key Metrics:** Monitor essential figures like sales revenue, profits, number of orders, and margin percentages.
-* **Analyze Sales Trends:** Observe how sales evolve over time and assess the performance of various regions and market segments.
-* **Evaluate Products:** Discover which product lines and categories are driving revenue and profits.
-* **Understand Customer Behavior:** Pinpoint top-spending and low-performing customers to refine engagement strategies.
-* **Monitor Returns:** Identify return patterns across product categories and geographical regions.
+**Sample:**
 
----
-
-### 📂 Data Sources Used
-
-The project utilizes three main datasets:
-
-* **Orders:** Contains transactional data such as order details, product information, sales, profit, quantity, discounts, and market.
-* **People:** Includes the names of sales representatives along with their respective regions.
-* **Returns:** Lists all returned orders and their associated markets.
+| Order ID       | Returned | Order Date | Ship Mode   | Customer Name | Segment   | Country       | Market | Sales   | Profit  | Discount |
+|----------------|----------|------------|-------------|----------------|-----------|---------------|--------|---------|---------|----------|
+| CA-2012-124891 | No       | 31-07-2020 | Same Day    | Rick Hansen    | Consumer  | United States | US     | 2309.65 | 762.18  | 0        |
+| IN-2013-77878  | Yes      | 05-02-2021 | Second Class| Justin Ritter  | Corporate | Australia     | APAC   | 3709.40 | -288.77 | 0.1      |
 
 ---
 
-### 📋 Sample Data
+### 2. Returns Table
+Captures details of returned orders by market.
 
-#### Orders Table
+**Sample:**
 
-| Order ID       | Order Date | Ship Mode | Customer Name | Segment  | Country       | Market | Sales   | Quantity | Profit | Priority |
-| -------------- | ---------- | --------- | ------------- | -------- | ------------- | ------ | ------- | -------- | ------ | -------- |
-| CA-2012-124891 | 31-07-2020 | Same Day  | Rick Hansen   | Consumer | United States | US     | 2309.65 | 7        | 762.18 | Critical |
-
-#### People Table
-
-| Person        | Region  |
-| ------------- | ------- |
-| Anna Andreadi | Central |
-| Chuck Magee   | South   |
-
-#### Return Table
-
-| Returned | Order ID       | Market |
-| -------- | -------------- | ------ |
-| Yes      | MX-2013-168137 | LATAM  |
+| Returned | Order ID        | Market  |
+|----------|------------------|---------|
+| Yes      | MX-2013-168137   | LATAM   |
+| Yes      | US-2011-165316   | LATAM   |
+| Yes      | ES-2013-1525878  | EU      |
 
 ---
 
-### ✅ Business Challenges Solved
+### 3. People Table
+Includes sales representatives and their regional assignments.
 
-This dashboard addresses several core analytical needs, including:
+**Sample:**
 
-* **KPI Overview:**
-  
-Objective: Calculate and display Total Sales, Total Profit, Total Quantity, Number of Orders, and Profit Margin dynamically.
-Steps:
-1. Import the Orders Table into Excel using Power Query.
-2. Create calculated columns for:
-   Profit Margin = Profit / Sales.
-3. Use Excel formulas to calculate:
-   Total Sales = =SUM(Sales).
-   Total Profit = =SUM(Profit).
-   Total Quantity = =SUM(Quantity).
-   Total Orders = Count of Order ID.
-Build a dynamic KPI table and use symbols to enhance visual appeal (e.g., 💰 for Total Sales).
-
-  ![kpi](https://github.com/user-attachments/assets/63f34d0b-cdd0-4ba5-8f91-6f7b280b2299)
-
-  
-* **Regional Sales & Profit Trends:** Offers insights into how various markets and segments are performing.
-* **Profit by Category:** Visualizes how each product category contributes to overall profit.
-* **Segment Sales Distribution:** Shows sales breakdown by customer segments.
-* **Country-wise Sales:** Highlights performance across countries.
-* **Top/Bottom Product Subcategories:** Lists best and worst-performing subcategories based on sales.
-* **Year-wise Sales Trends:** Reveals seasonality and yearly performance through time-series analysis.
+| Person           | Region   |
+|------------------|----------|
+| Anna Andreadi    | Central  |
+| Chuck Magee      | South    |
+| Deborah Brumfield| Africa   |
 
 ---
 
-### 🧭 Future Improvements
+## 💡 Problem Statements Solved with Implementation Steps
 
-Planned enhancements to elevate dashboard effectiveness include:
+### ✅ 1. KPI Calculation
+**Goal:** Dynamically calculate Total Sales, Profit, Quantity, Orders, and Profit Margin.
 
-* In-depth **Return Trend Analysis** with root-cause insights.
-* **Customer Segmentation:** Rank best and least active customers.
-* **Market-level Performance Comparison:** Benchmark performance across regions.
-* **Product-level Deep Dive:** Spot inventory and pricing opportunities.
-* Enhanced filtering and user controls to support granular analysis.
+**Steps:**
+- Load data using Power Query
+- Create calculated fields:
+  - `Profit Margin = Profit / Sales`
+  - `Order Count = COUNT(Order ID)`
+- Use Excel formulas:
+  - `=SUM(Sales)` for Total Sales
+  - `=SUM(Profit)` for Total Profit
+  - `=SUM(Quantity)` for Total Quantity
+- Build a KPI summary table using icons for visual clarity (💰, 📦, 📈)
 
----
-
-### 📌 Key Metrics Dashboarded
-
-| KPI Name       | Metric Description       | Icon |
-| -------------- | ------------------------ | ---- |
-| Total Sales    | Total of Sales Amount    | 💰   |
-| Total Profit   | Total Profit from Orders | 📈   |
-| Total Quantity | Number of Items Sold     | 📦   |
-| Order Count    | Total Number of Orders   | 🛒   |
-| Profitability  | Profit Margin %          | 💹   |
-| Avg. Discount  | Mean of Discount Offered | 🔍   |
+![kpi](https://github.com/user-attachments/assets/b4cece2b-c8da-45c3-90fb-d105133091df)
 
 ---
 
-### 🛠️ Dashboard Development Process
+### 📈 2. Sales and Profit Trend Analysis
+**Goal:** Visualize sales and profit movement over time.
 
-**1. Setup Environment**
-Choose a tool such as **Power BI**, **Tableau**, or **Python with Plotly/Dash**. Load the datasets (Orders, People, Returns) into the platform.
+**Steps:**
+- Pivot Table with `Order Date` (Grouped by Month/Year)
+- Add `Sales` and `Profit` to values
+- Line Chart to show trends
+- Add slicers for filters (e.g., Region, Segment)
 
-**2. Data Cleaning**
-
-* Handle missing data and duplicate values.
-* Format date and text fields consistently.
-* Create necessary calculated fields (e.g., profit margin, total revenue, etc.).
-
-**3. Calculations and KPIs**
-Derive core KPIs including total sales, total profit, quantity sold, order volume, average discount, etc.
-
-**4. Visual Design**
-
-* **Bar Charts**: For analyzing top/bottom subcategories.
-* **Line Charts**: To illustrate yearly sales trends.
-* **Pie Charts**: To represent segment-wise contribution.
-* **Maps**: For showing country-level sales data.
-* Apply filters for market, region, and customer segment interactivity.
-
-**5. Return Analysis**
-Visualize returns by market and category. Highlight any problematic trends or patterns in returned orders.
-
-**6. Deployment**
-
-* Deploy via web (if using Tableau/Power BI cloud services)
-* Or publish as a web app using frameworks like Dash.
-* Share the dashboard link with stakeholders.
-
-**7. Testing & Feedback**
-Validate dashboard usability. Collect feedback and refine based on user inputs.
+![Sales vs Profit](https://github.com/user-attachments/assets/0ed77c31-5290-47b5-a5c0-87fad407a03b)
 
 ---
 
-### 🏁 Conclusion
+### 📊 3. Category-Wise Profit
+**Goal:** Identify the most profitable product categories.
 
-The Dynamic Retail Dashboard stands as a robust tool for analyzing critical aspects of retail business performance. With intuitive design and actionable insights, it aids retail managers in understanding sales behavior, customer dynamics, and product performance. Planned future features such as advanced return and segment analysis will further enrich decision-making capabilities.
+**Steps:**
+- Pivot Table with `Category` as rows and `Profit` as values
+- Sort by Profit descending
+- Bar Chart for visual representation
+- Add filters for deeper analysis
+
+![category](https://github.com/user-attachments/assets/d4558765-f017-4a7c-9d81-a5d184a8f040)
 
 ---
 
-Let me know if you also want a **shorter version** or markdown formatting for GitHub!
+### 🧭 4. Segment-Wise Sales Share (%)
+**Goal:** Show sales contribution per customer segment.
+
+**Steps:**
+- Pivot Table with `Segment` as rows and `Sales` as values
+- Use formula: `Segment Sales / Total Sales * 100`
+- Display via Pie or Donut Chart with percentage labels
+
+![Segment](https://github.com/user-attachments/assets/c2478e0a-315f-44eb-b703-af019332bf99)
+
+---
+
+### 🌍 5. Country-wise Sales
+**Goal:** Analyze geographic sales distribution.
+
+**Steps:**
+- Pivot Table with `Country` and `Sales`
+- Use conditional formatting or create a Map Chart
+- Highlight top-selling countries
+
+---
+
+### 🥇 6. Top 5 Subcategories
+**Goal:** Discover the best-performing subcategories.
+
+**Steps:**
+- Pivot Table: `Sub-Category` + `Sales`
+- Sort in descending order
+- Filter Top 5 only
+- Column Chart for visualization
+
+---
+
+### 🚫 7. Bottom 5 Subcategories
+**Goal:** Highlight underperforming subcategories.
+
+**Steps:**
+- Similar to above but sort in ascending order
+- Filter Bottom 5 only
+- Use contrasting colors to emphasize performance gap
+
+---
+
+### 📆 8. Yearly Sales Trends
+**Goal:** Track performance across years.
+
+**Steps:**
+- Group `Order Date` by Year
+- Add `Sales` to values
+- Line Chart for trend overview
+- Use slicers for category/region/segment filtering
+
+---
+
+## ⚙️ Dynamic Features Included
+- **Real-time Charts** that respond to slicer selections
+- **Power Query Integration** for automated data refresh
+- **KPI Table** for quick executive-level metrics
+
+---
+
+## 🔄 Next Steps / Extensions
+
+Enhance dashboard insights with:
+- **Return Analysis:** Spot patterns by category and region
+- **Top & Bottom Customers:** Identify loyal and risky customers
+- **Market Comparison:** Evaluate different regional performances
+- **Product-Level Insights:** Drill down into product contribution
+
+---
+
+## 🧠 Why This Dashboard Matters
+
+This Excel-based solution helps retail stakeholders to:
+- Monitor performance using clear KPIs
+- Identify profitable areas and improvement zones
+- Understand customer, category, and market dynamics
+- Make informed, strategic business decisions with ease
+
+---
+
+## 📌 Tools Used
+- Microsoft Excel
+- Power Query
+- Pivot Tables & Charts
+- Conditional Formatting & Slicers
+
+---
+
+## 📎 Project Status
+✅ Completed initial version  
+🚀 Planned enhancements underway
+
+---
+
+## 📬 Contact
+For feedback, suggestions, or collaboration, feel free to reach out via GitHub Issues or contact me directly.
+
+---
+
