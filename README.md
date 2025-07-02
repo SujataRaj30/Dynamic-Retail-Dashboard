@@ -95,25 +95,25 @@ Includes sales representatives and their regional assignments.
 
 ---
 
-### 🧭 4. Segment-Wise Sales Share (%)
+### 🧭 4. Segment-Wise Profit Share (%)
 **Goal:** Show sales contribution per customer segment.
 
 **Steps:**
-- Pivot Table with `Segment` as rows and `Sales` as values
-- Use formula: `Segment Sales / Total Sales * 100`
+- Pivot Table with `Segment` as rows and `Profit` as values
+- Use formula: `Segment Profit / Total Profit * 100`
 - Display via Pie or Donut Chart with percentage labels
 
 ![Screenshot 2025-07-02 125825](https://github.com/user-attachments/assets/2f7f3113-acb3-4631-86a7-0de98c54934a)
 
 ---
 
-### 🌍 5. Country-wise Sales
-**Goal:** Analyze geographic sales distribution.
+### 🌍 5. Country-wise Profit
+**Goal:** Analyze geographic Profit distribution.
 
 **Steps:**
-- Pivot Table with `Country` and `Sales`
+- Pivot Table with `Country` and `Profit`
 - Use conditional formatting or create a Map Chart
-- Highlight top-selling countries
+- Highlight top-Profit making countries
 
 ![Screenshot 2025-07-02 125941](https://github.com/user-attachments/assets/c43f39b8-896c-49d5-8243-ade665708173)
 
@@ -192,9 +192,13 @@ This Excel-based solution helps retail stakeholders to:
 
 ---
 
-## 📎 Project Status
-✅ Completed initial version  
-🚀 Planned enhancements underway
+## 📎 Visuals
+This repository includes:
+
+- Visual examples for each solved problem statement.
+- Snapshots of the final dashboard with all components.
+
+![Dashboard_img](https://github.com/user-attachments/assets/e41d8a75-7520-4429-9a9e-8500809bd8eb)
 
 ---
 
